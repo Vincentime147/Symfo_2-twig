@@ -1,0 +1,34 @@
+=============================
+Prés requi Symphony [Windows version]
+=============================
+
+##################
+Scoop [scoop.sh] [PowerShell]
+-----------------
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
+
+scoop install symfony-cli
+
+
+--
+composer create-project symfony/skeleton mon_projet_symfony
+composer create-project symfony/skeleton:"6.3.*" mon_projet_symfony
+composer create-project symfony/website-skeleton mon_projet_symfony
+###############
+Composer [all terminal][dans le projet]
+-----------------
+composer install
+
+
+
+composer require symfony/twig-bundle
+composer require twig
+
+
+################
+Démaré le serveur  [all terminal]
+-----------------
+symfony serve -d
+symfony.exe server:start
+symfony.exe server:stop
