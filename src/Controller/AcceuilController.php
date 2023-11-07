@@ -9,16 +9,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class AcceuilController extends AbstractController
-{
-    #[Route('/acceuil', name: 'app_acceuil')]
+{   
+    #[Route('/', name: 'dashboard')]
     public function index(): Response
     {
-        return $this->render('acceuil/index.html.twig', [
-            'controller_name' => 'AcceuilController',
-        ]);
+        return $this->render('acceuil/dashboard.html.twig');
     }
 
-    #[Route('/page1', name: 'app_acceuil')]
+    #[Route('/page1', name: 'page1')]
     public function page_1(): Response
     {
         return $this->render('acceuil/page1.twig', [
@@ -26,7 +24,7 @@ class AcceuilController extends AbstractController
         ]);
     }
 
-    #[Route('/showProducts')] 
+    #[Route('/showProductsTest1')] 
     public function showProducts(Request $request) { 
         $product = $request->query->get('product', 'defaultProduct');
                 // Affichage du résultat 

@@ -1,0 +1,16 @@
+{# templates/customers.html.twig #}
+<!DOCTYPE html>
+<head>
+    <title>Liste des clients</title>
+</head>
+<body>
+<h1>Liste des clients</h1>
+<ol>
+    {% for customer in customers|sort %}
+        <li>{{ customer.name }}</li>
+    {% else %}
+        <li>Aucun client trouvé.</li>
+    {% endfor %}
+    <br><a href="{{ path('dashboard') }}">Retour au tableau de bord</a>
+</ol>
+</body>

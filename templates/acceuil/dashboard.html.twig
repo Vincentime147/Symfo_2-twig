@@ -1,0 +1,14 @@
+
+{% extends "base.html.twig" %}
+
+{% block title %}Tableau de bord{% endblock %}
+
+
+{% block body %}
+<h1>Tableau de bord</h1>
+<h3>Le CSS, c'est plus fort que toi</h3>
+<ul>
+    <li><a href="{{ path('products') }}">Page des produits</a></li>
+    <li><a href="{{ path('customers_list') }}">Page des clients</a></li>
+</ul>
+{% endblock %}

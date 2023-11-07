@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Liste Produit{% endblock %}
+
+
+{% block body %}
+
+<table>
+    <tr>Liste Produit</tr>
+    {% for product in products %}
+    <tr>
+        <th>{{ product.name }}</th>
+        <th> : </th>
+        <th>{{ product.price }} €</th>
+        <th><a href="{{ path('product_detail', {'id': loop.index}) }}">Détails</a></th>
+    </tr>
+    {% endfor %}
+    <tr>
+        <th><a href="{{ path('dashboard') }}">Retour au tableau de bord</a></th>
+    </tr>
+
+</table>
+{% endblock %}
