@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FeedbackController!{% endblock %}
+
+{% block body %}
+    <a href="{{ path('dashboard') }}">Page de Commantaire</a>
+    <li><a href="{{ path('app_feedback') }}">Page de Commantaire</a></li>
+    <br>
+    <br>
+
+    <table class="table table-striped table-dark" >
+        <tr>
+            <th >Nom :</th>
+            <th> {{ Nom }}</th>
+        </tr>
+        <tr>
+            <th>Email :</th>
+            <th> {{ EmailClient }}</th>
+        </tr>
+        <tr>
+            <th>Note Produit :</th>
+            <th> {{ NoteDuProduit }}</th>
+        </tr>
+        <tr>
+            <th>Commentaires :</th>
+            <th> {{ Commentaires }}</th>
+        </tr>
+        <tr>
+            <th>Date Soumission :</th>
+            <th> {{ DateDeSoumission.day }}/{{ DateDeSoumission.month }}/{{ DateDeSoumission.year }}</th>
+        </tr>
+    </table>
+    
+
+{% endblock %}

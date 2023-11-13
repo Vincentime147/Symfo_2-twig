@@ -20,8 +20,8 @@ class Feedback
     #[ORM\Column(length: 255)]
     private ?string $emailClient = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $noteProduit = null;
+    #[ORM\Column]
+    private ?int $noteProduit = null;
 
     #[ORM\Column(length: 255)]
     private ?string $commentaires = null;
@@ -58,12 +58,12 @@ class Feedback
         return $this;
     }
 
-    public function getNoteProduit(): ?string
+    public function getNoteProduit(): ?int
     {
         return $this->noteProduit;
     }
 
-    public function setNoteProduit(string $noteProduit): static
+    public function setNoteProduit(int $noteProduit): static
     {
         $this->noteProduit = $noteProduit;
 
