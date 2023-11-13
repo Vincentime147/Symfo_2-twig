@@ -15,20 +15,30 @@ scoop install symfony-cli
 composer create-project symfony/skeleton mon_projet_symfony
 composer create-project symfony/skeleton:"6.3.*" mon_projet_symfony
 composer create-project symfony/website-skeleton mon_projet_symfony
-###############
-Composer [all terminal][dans le projet]
------------------
+#############################################
+## Composer [all terminal][dans le projet] ##
+#############################################
 composer install
-
-
+-----------------
+# Twig
+-----------------
 
 composer require symfony/twig-bundle
 composer require twig
-
-
-################
-Démaré le serveur  [all terminal]
 -----------------
+# Form
+-----------------
+composer require symfony/form
+--
+composer require symfony/maker/bundle --dev
+php bin/console list make
+
+=========
+require require symfony/orm-pack
+
+-----------------
+Démaré le serveur  [all terminal]
+##############################
 symfony serve -d
 symfony.exe server:start
 symfony.exe server:stop

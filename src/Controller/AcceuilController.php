@@ -17,8 +17,11 @@ class AcceuilController extends AbstractController
     }
 
     #[Route('/page1', name: 'page1')]
-    public function page_1(): Response
+    public function page_1($request): Response
     {
+        if ($request){
+            dump($request->request->all());
+        }
         return $this->render('acceuil/page1.twig', [
             'controller_name' => 'AcceuilController',
         ]);
